@@ -1,0 +1,216 @@
+<!DOCTYPE HTML>
+<!--
+Author: Emiliano Rodriguez
+Purpose: Enhancing the way you look at your day
+-->
+<html>
+	<head>
+		<title>Live Reports - San Antonio, TX</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="refresh" content="5100">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+                <link href="css/youtube.css" rel="stylesheet" type="text/css">
+                <link href="css/banner.css" rel="stylesheet" type="text/css">
+                <link href="css/news.css" rel="stylesheet" type="text/css">
+                <link href="css/inspo.css" rel="stylesheet" type="text/css">
+                <link href="css/midsection.css" rel="stylesheet" type="text/css">
+                <link href="css/events.css" rel="stylesheet" type="text/css">
+                <link href="css/progressbar.css" rel="stylesheet" type="text/css">
+                <link href="css/twitter.css" rel="stylesheet" type="text/css">
+                <link href="css/progressbartest.css" rel="stylesheet" type="text/css">
+                <link href="css/weather.css" rel="stylesheet" type="text/css">
+                <link href="css/calendar.css" rel="stylesheet" type="text/css">
+                <link href="css/clocks.css" rel="stylesheet" type="text/css">
+
+<style>
+</style>
+	</head>
+<body style="background-color:black">
+
+<!--------------CHART-------------------------------------->
+  <div class="tradingview-widget-container">
+  <div id="tradingview_b4826"></div>
+  <div class="tradingview-widget-copyright"></div>
+
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript" src="scripts/charts.js">
+  </script>
+</div>
+
+<!--------------/CHART-------------------------------------->
+
+
+
+<!--------------YOUTUBE-------------------------------------->
+
+
+
+<div class="youtube">
+<iframe width="660" height="415" src="https://www.youtube.com/embed/6lCCk6rgn84?&autoplay=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+
+
+<div class="box_section">
+
+<!--------------NEWS-------------------------------------->
+<div class="box">
+    <div id="news">
+    </div>
+</div>
+    <script src="scripts/topnews.js"></script>
+<!--------------/NEWS-------------------------------------->
+
+<!--------------TWITTER-------------------------------------->
+
+<div class="box_center_mid_lower">
+    <div id="twitter">
+    </div>
+</div>
+    <script src="scripts/twitter.js"></script>
+<!--------------/TWITTER-------------------------------------->
+
+
+<!--------------TESTING-------------------------------------->
+
+<div class="box_center_mid">
+<h1 style="text-align:center;position:relative;color:white;">Progress Year Bar</h1>
+
+<div id="myProgress">
+  <div id="myBar"></div>
+</div>
+
+    <div id="pcttime">
+    </div>
+</div>
+    <script src="scripts/progressbartest.js"></script>
+<!--------------/TESTING-------------------------------------->
+
+<!--------------CLOCKS-------------------------------------->
+<div class="box_center_top">
+<p style="color:white;text-align:left;"> New York </p>
+<div id="MyClockDisplayNY" class="clockNY" onload="showTime()"></div>
+</div>
+
+<div class="box_center_top">
+<p style="color:white;text-align:center;"> San Antonio </p>
+<div id="MyClockDisplaySA" class="clockSA" onload="showTime()"></div>
+</div>
+
+<div class="box_center_top_bottom">
+<p style="color:white;text-align:left;"> Tokyo </p>
+<div id="MyClockDisplayTK" class="clockTK" onload="showTime()"></div>
+</div>
+
+<div class="box_center_top_bottom">
+<p style="color:white;text-align:center;"> Madrid </p>
+<div id="MyClockDisplayMD" class="clockMD" onload="showTime()"></div>
+</div>
+
+
+    <script src="scripts/clocks.js"></script>
+<!--------------/CLOCKS-------------------------------------->
+
+
+
+<!--------------WEATHER-------------------------------------->
+
+<div class="box_center_bottom_right">
+
+
+    <div id="weather">
+    </div>
+
+</section>
+<section class="ajax-section">
+  <div class="container">
+    <ul class="cities"></ul>
+  </div>
+</section>
+
+
+
+
+
+</div>
+    <script src="scripts/weather.js"></script>
+
+<!--------------/WEATHER-------------------------------------->
+
+
+<!--------------INSPOQUOTES-------------------------------------->
+
+<div class="box_center_left_bottom">
+    <div id="inspo">
+    </div>
+</div>
+    <script src="scripts/inspo.js"></script>
+<!--------------/INSPOQUOTES-------------------------------------->
+
+
+<!--------------EVENTS-------------------------------------->
+<!--<div class="calendar">
+<img  src="img/novembercalendar.png" alt="November" />
+</div>
+-->
+
+<div class="box_right">
+    <div id="events">
+    </div>
+</div>
+    <script src="scripts/events.js"></script>
+
+<!--------------/EVENTS-------------------------------------->
+</div>
+
+
+<!--------------BANNER-------------------------------------->
+<div class="banner">
+<div class="tradingview-widget-container">
+<div class="tradingview-widget-copyright"></div>
+<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "Bitcoin"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "Ethereum"
+    },
+    {
+      "description": "Apple",
+      "proName": "NASDAQ:AAPL"
+    },
+    {
+      "description": "LINK",
+      "proName": "KRAKEN:LINKUSD"
+    },
+    {
+      "description": "BOEING",
+      "proName": "NYSE:BA"
+    }
+  ],
+  "showSymbolLogo": true,
+  "colorTheme": "dark",
+  "isTransparent": false,
+  "displayMode": "adaptive",
+  "locale": "en"
+}
+
+</script>
+</div>
+</div>
+
+<!--------------/BANNER-------------------------------------->
+
+</body>
+</html>

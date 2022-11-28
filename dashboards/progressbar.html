@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+.dateFrame {
+  width: 50%;
+  height: 195px;
+  background-color: black;
+  outline: solid blue 5px;
+}
+#myProgress {
+  width: 50%;
+  background-color: red;
+  position:relative;
+  left:25%;
+}
+
+#myBar {
+  width: 0%;
+  height: 30px;
+  background-color: #04AA6D;
+}
+
+.date {
+  width: 0%;
+  height: 30px;
+  background-color: #04AA6D;
+  outline-color: solid black;
+}
+
+</style>
+<body style="background-color:#5A5A5A;" onload="move()">
+
+<div class="dateFrame">
+
+<h1 style="text-align:center;position:relative;top:5%;color:white;">Progress Year Bar</h1>
+
+<div id="myProgress">
+  <div id="myBar"></div>
+</div>
+
+<div id="date">
+	<p style="text-align:center" id="pcttime"></p>
+</div>
+
+
+</div>
+
+
+
+<br>
+<!--<button onclick="move()">Click Me</button> -->
+
+<script>
+var i = 0;
+
+
+function move() {
+var now = new Date();
+var start = new Date(now.getFullYear(), 0, 0);
+var diff = now - start;
+var oneDay = 1000 * 60 * 60 * 24;
+var currentYear = new Date().getFullYear();
+var currentMonth = new Date().getMonth() + 1;
+var currentDay = new Date().getDate();
+var day = Math.floor(diff / oneDay);
+var daysLeft = 365 - day;
+var pctDay = (day / 365 );
+var ytd =parseFloat(pctDay.toPrecision(2))*100;
+
+const nameOfMonth = new Intl.DateTimeFormat('en-US', {month: 'long'}).format(
+  new Date(),
+);
+
+document.getElementById("pcttime").innerHTML = "<span style=\"font-size: 40px;color:orange;\">" + nameOfMonth + "  " + currentDay + ",  " + currentYear + "   [" + ytd.toLocaleString() + "%]<br>"+day+" days in "+ daysLeft+" days left";
+
+
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width >= ytd) {
+        clearInterval(id);
+        i = 0;
+        console.log('Day of year: ' + ytd);
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>
