@@ -1,0 +1,118 @@
+.box_center_bottom_right {
+  position:absolute;
+  right:22%;
+  top:55%;
+  width: 20%;
+  height:100px;
+  margin-right:6%;
+}
+
+
+:root {
+  --text_light: #66ccff;
+  --text_med: blue;
+  --text_dark: #1e2432;
+  --red: #ff1e42;
+  --darkred: #c3112d;
+  --orange: #ff8c00;
+}
+
+
+.ajax-section {
+  margin: 30px 10px 100px;
+}
+
+.ajax-section .cities {
+  display: grid;
+  grid-gap: 32px  200px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.ajax-section .city {
+  position: relative;
+  top:-30%;
+  padding: 1px 50px 10px;
+  border-radius: 20px;
+  background: var(--text_light);
+  color: blue;
+}
+
+.ajax-section .city::after {
+  content: '';
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: -10px;
+  left: 0%;
+  z-index: -1;
+  opacity: 0.3;
+  border-radius: 20px;
+  background: var(--text_light)
+}
+
+.ajax-section figcaption {
+  margin-top: 1px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ajax-section .city-temp {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: red;
+}
+
+.ajax-section .city sup {
+  font-size: 0.5em;
+}
+
+.ajax-section .city-name sup {
+  padding: 0.2em 0.6em;
+  border-radius: 30px;
+  color: var(--text_light);
+  background: orange;
+}
+
+.ajax-section .city-icon {
+  top:5%;
+  margin-top: 0%;
+  width: 100px;
+  height: 100px;
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    padding: 30px;
+  }
+  
+  .ajax-section .cities {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .heading,
+  .ajax-section .city-temp {
+    font-size: 3rem;
+  }
+  
+  .ajax-section {
+    margin-top: 20px;
+  }
+  
+  
+   .ajax-section .cities {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    padding: 1px;
+  }
+  
+  .ajax-section .cities {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
